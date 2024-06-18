@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'Obra Letra';
+    src: url('Fontes/Obraletra/KCObraLetraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('Fontes/Barlow/Barlow-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BarlowMedium';
+    src: url('Fontes/Barlow/Barlow-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BarlowLight';
+    src: url('Fontes/Barlow/Barlow-ExtraLight.ttf') format('truetype');
+}
+
+/* Modificando o tamanho da imagem */
+.resized-image {
+    width: 600px; /* Define a largura como 300px */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.resized-star {
+    width: 300px;
+    position: absolute;
+}
+
+.resized-github {
+    width: 65px;
+}
+
+.resized-lkdn {
+    width: 70px;
+}
+
+.resized-email {
+    width: 70px;
+}
+
+.jumbotron {
+    height: 50vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    margin-bottom: 0%;
+    background-color: #A799BB;
+    font-family: 'Obra Letra', sans-serif;
+}
+
+.navbar {
+    background-color: #C2ADE0;
+    font-family: 'BarlowMedium';
+    font-size: 19px;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px; 
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-item .nav-link.active {
+    color: #2197BD !important;  /* Cor do texto quando o link está ativo */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+ 
+:target {
+  scroll-margin-top: .8em;
+}
+
+#sobre {
+    display: flex; /* Define a section como flexível */
+    justify-content: space-between; /* Distribui as divs uniformemente ao longo da section */
+    width: 100%; /* Garante que a section ocupe toda a largura disponível */
+}
+
+#projetos {
+    justify-content: space-between; /* Distribui as divs uniformemente ao longo da section */
+    width: 100%; /* Garante que a section ocupe toda a largura disponível */
+}
+
+
+.section-sobre h2 {
+    font-family: 'Obra Letra', sans-serif;
+    color: #C2ADE0;
+    margin-top: 10px;
+}
+
+.section-sobre p{
+    font-family: 'BarlowMedium';
+    color: #C2ADE0;
+}
+
+.titulo-custom {
+    margin-top: 70px;
+}
+
+.progress-container {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .label {
+    font-family: 'BarlowLight';
+    color: #333;
+    background-color: #C2ADE0;
+    width: 100px;
+    text-align: center;
+    z-index: 1;
+    border-left: 100px;
+    border-start-end-radius: 6px;
+    direction: rtl;
+    border-bottom-left-radius: 6px;
+}
+  
+  .progress {
+    flex: 1; /* Permite que a barra de progresso ocupe o espaço restante */
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 30px !important;
+    border-bottom-left-radius: 0% !important;
+    border-top-left-radius: 0% !important;
+  }
+  
+  .progress-bar-custom {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: bold;
+    background-color: #2197BD !important;
+  }
+  
+  .percentage {
+    margin-left: 10px;
+    font-family: 'BarlowMedium';
+    position: absolute;
+    right: 10px;
+    color: #333;
+    z-index: 1;
+  }
+
+  .custom-span {
+    font-family: 'BarlowLight';
+    color: #333;
+    background-color: #C2ADE0;
+    z-index: 1;
+}
+
+.section-formacao h2 {
+    font-family: 'Obra Letra', sans-serif;
+    color: #004138;
+    margin-top: 10px;
+}
+
+.section-formacao p{
+    font-family: 'BarlowMedium';
+    color: #004138;
+}
+
+.section-projetos, .project-nav {
+    background-color: #004138;
+}
+
+.section-projetos h2{
+    font-family: 'Obra Letra', sans-serif;
+    color: #C2ADE0;
+    padding: 1.5rem;  /* Equivalente a p-4 */
+    margin-bottom: 3rem;  /* Equivalente a mb-5 */
+    margin-top: 3rem;  /* Equivalente a mt-5 */
+}
+
+.project-nav .nav-link.active{
+    background-color:#C2ADE0;
+}
+
+.section-footer {
+    font-family: 'Obra Letra', sans-serif;
+    color: #C2ADE0;
+    background-color: #004138;
+}
+
