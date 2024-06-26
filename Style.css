@@ -177,11 +177,20 @@ html {
     color: #C2ADE0;
     padding: 1.5rem;  /* Equivalente a p-4 */
     margin-bottom: 3rem;  /* Equivalente a mb-5 */
-    margin-top: 3rem;  /* Equivalente a mt-5 */
+    padding-top: 3rem;  /* Equivalente a mt-5 */
 }
 
 .project-nav .nav-link.active{
     background-color:#C2ADE0;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px !important;
+}
+
+li {
+    display: inline;   
 }
 
 .section-footer {
