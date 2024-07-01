@@ -201,17 +201,66 @@ html {
 }
 
 .projetos-imagens {
-    width: 500px;
-    height: auto;
+  width: 500px;
+  height: auto;
 }
 
-ul {
-  padding: 0px;
-  margin: 0px !important;
+.project-list {
+  overflow: hidden;
+  position: relative;
+  
 }
 
-li {
-  display: inline;
+.image-list {
+  display: flex;
+  height: 100%;
+  overflow-x: hidden;
+  justify-content: center;
+}
+
+.image-item {
+  min-width: 500px;
+  max-width: 200px; /* Fix the width of each image item */
+  padding-top: 50px;
+  text-align: center;
+  box-sizing: border-box; /* Include padding and border in the width and height */
+  text-align: center;
+  font-family: "BarlowMedium";
+  color: #c2ade0;
+}
+
+.image-item h4 {
+  width: 300px;
+  padding-top: 20px;
+  text-align: center;
+  margin: auto;
+}
+
+.image-item p {
+  width: 300px;
+  padding-top: 10px;
+  text-align: center;
+  margin: auto;
+}
+
+.image-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+#scroll-left-button,
+#scroll-right-button {
+  display: block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#scroll-left-button:hover,
+#scroll-right-button:hover {
+  background-color: #0056b3;
 }
 
 .section-footer {

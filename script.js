@@ -69,3 +69,20 @@ function setActiveNavLink(id) {
     // Adiciona a classe 'active' ao link clicado
     document.getElementById(id).classList.add('active');
 }
+
+// Configurar botões de rolagem horizontal
+document.getElementById('scroll-left-button').addEventListener('click', function () {
+    const container = document.querySelector('.image-list');
+    container.scrollBy({
+        left: -200,
+        behavior: 'smooth'
+    });
+});
+
+document.getElementById('scroll-right-button').addEventListener('click', function () {
+    const container = document.querySelector('.image-list');
+    container.scrollBy({
+        left: 200,
+        behavior: 'smooth'
+    });
+});
