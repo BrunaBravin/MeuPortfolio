@@ -24,18 +24,7 @@
   height: auto; /* Mantém a proporção da imagem */
 }
 
-.resized-github {
-  width: 65px;
-}
-
-.resized-lkdn {
-  width: 70px;
-}
-
-.resized-email {
-  width: 70px;
-}
-
+/* Home */
 .jumbotron {
   height: 100vh;
   display: flex;
@@ -52,6 +41,7 @@
   font-size: 80px;
 }
 
+/* Barras de navegação */
 .navbar {
   background-color: #c2ade0;
   font-family: "BarlowMedium";
@@ -75,6 +65,7 @@ html {
   scroll-margin-top: 0.8em;
 }
 
+/* Sections */
 #sobre {
   display: flex; /* Define a section como flexível */
   justify-content: space-between; /* Distribui as divs uniformemente ao longo da section */
@@ -86,9 +77,15 @@ html {
   width: 100%; /* Garante que a section ocupe toda a largura disponível */
 }
 
-.section-sobre h2 {
+#contato {
+  padding-top: 150px;
+}
+
+/* Section Sobre */
+.section-sobre h2,
+h3 {
   font-family: "Obra Letra", sans-serif;
-  color: #c2ade0;
+  color: #c2ade0 !important;
   margin-top: 10px;
   font-size: 50px;
 }
@@ -100,19 +97,35 @@ html {
 }
 
 .resized-star {
-  width: 400px;
   position: absolute;
+  width: 400px;
   left: -70px;
   bottom: 10px;
   margin-left: 120px;
   transform: rotate(-20eg);
-  display: block;
+}
+
+@media (max-width: 1581px) {
+  .resized-star {
+    position: static;
+    top: 50px;
+    right: 5px;
+    margin-left: 0%;
+    width: 300px;
+  }
 }
 
 .titulo-custom {
   padding-top: 150px;
 }
 
+@media (max-width: 1581px) {
+  .titulo-custom {
+    padding-top: 0%;
+  }
+}
+
+/* Barras de porcentagem */
 .progress-container {
   width: 100%;
   margin: 20px 0;
@@ -121,7 +134,7 @@ html {
 }
 
 .label {
-  font-family: "BarlowLight";
+  font-family: "BarlowMedium";
   color: #333;
   background-color: #c2ade0;
   width: 100px;
@@ -169,6 +182,7 @@ html {
   z-index: 1;
 }
 
+/* Section Formação */
 .section-formacao h2 {
   font-family: "Obra Letra", sans-serif;
   color: #004138;
@@ -176,10 +190,65 @@ html {
   font-size: 50px;
 }
 
+@media (max-width: 960px) {
+  .text-custom {
+    max-width: 50px;
+  }
+}
+
 .section-formacao p {
   font-family: "BarlowMedium";
   color: #004138;
   font-size: 20px;
+}
+
+.resized-star2 {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  width: 200px;
+  transform: rotate(-20eg);
+  margin: 1rem;
+}
+
+/* Media queries para ajustar a imagem em diferentes tamanhos de tela */
+@media (max-width: 960px) {
+  .resized-star2 {
+    width: 100px;
+    margin: 0%;
+    max-width: 50px; /* Reduz o tamanho da imagem para telas menores */
+  }
+}
+
+.centered-image {
+  transform: translate(-62%, 10%) !important;
+  width: 200px;
+  height: auto;
+}
+
+
+
+
+
+/* Section Projetos */
+.section-projetos a:link {
+  text-decoration: none;
+  color: #c2ade0;
+}
+
+.section-projetos a:visited {
+  text-decoration: none;
+  color: #c2ade0;
+}
+
+.section-projetos a:hover {
+  text-decoration: underline;
+  color: #c2ade0;
+}
+
+.section-projetos a:active {
+  text-decoration: none;
+  color: #c2ade0;
 }
 
 .section-projetos,
@@ -208,23 +277,24 @@ html {
 .project-list {
   overflow: hidden;
   position: relative;
-  
 }
 
 .image-list {
   display: flex;
+  flex-wrap: wrap; /* mudanças*/
+  gap: 1rem;   /* mudanças*/
   height: 100%;
   overflow-x: hidden;
   justify-content: center;
 }
 
 .image-item {
+  flex: 1 1 300px;  /* mudanças*/
   min-width: 500px;
   max-width: 200px; /* Fix the width of each image item */
   padding-top: 50px;
   text-align: center;
   box-sizing: border-box; /* Include padding and border in the width and height */
-  text-align: center;
   font-family: "BarlowMedium";
   color: #c2ade0;
 }
@@ -263,8 +333,21 @@ html {
   background-color: #0056b3;
 }
 
+/* Section Footer */
 .section-footer {
   font-family: "Obra Letra", sans-serif;
   color: #c2ade0;
   background-color: #004138;
+}
+
+.resized-github {
+  width: 65px;
+}
+
+.resized-lkdn {
+  width: 70px;
+}
+
+.resized-email {
+  width: 70px;
 }
