@@ -30,15 +30,40 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 0%;
   background-color: #a799bb;
   font-family: "Obra Letra", sans-serif;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
 }
 
 .jumbotron h1 {
   color: #004138;
   text-align: center;
   font-size: 80px;
+}
+
+.lead {
+  color: #004138;
+}
+
+.jumbotron-image-right {
+  position: absolute;
+  width: 1700px;
+  top: 250px;
+  left: 930px;
+  transform: rotate(-5deg);
+  z-index: 0;
+  
+}
+
+.jumbotron-image-left {
+  position: absolute;
+  width: 1700px;
+  bottom: 425px;
+  right: 850px;
+  transform: rotate(-10deg);
 }
 
 /* Barras de navegação */
@@ -75,6 +100,7 @@ html {
 #projetos {
   justify-content: space-between; /* Distribui as divs uniformemente ao longo da section */
   width: 100%; /* Garante que a section ocupe toda a largura disponível */
+  padding-top: 30px;
 }
 
 #contato {
@@ -90,6 +116,10 @@ h3 {
   font-size: 50px;
 }
 
+.section-sobre h2 {
+  margin-bottom: 50px;
+}
+
 .section-sobre p {
   font-family: "BarlowMedium";
   color: #c2ade0;
@@ -102,7 +132,7 @@ h3 {
   left: -70px;
   bottom: 10px;
   margin-left: 120px;
-  transform: rotate(-20eg);
+  transform: rotate(-20deg);
 }
 
 @media (max-width: 1581px) {
@@ -207,14 +237,14 @@ h3 {
   right: 10px;
   position: absolute;
   width: 200px;
-  transform: rotate(-20eg);
+  transform: rotate(10deg);
   margin: 1rem;
 }
 
 /* Media queries para ajustar a imagem em diferentes tamanhos de tela */
 @media (max-width: 960px) {
   .resized-star2 {
-    width: 100px;
+    width: 200px;
     margin: 0%;
     max-width: 50px; /* Reduz o tamanho da imagem para telas menores */
   }
@@ -226,34 +256,19 @@ h3 {
   height: auto;
 }
 
-
-
-
+.botao-custom {
+  background-color:#2197bd !important;
+  font-family: "BarlowMedium" !important;
+}
 
 /* Section Projetos */
-.section-projetos a:link {
-  text-decoration: none;
-  color: #c2ade0;
-}
-
-.section-projetos a:visited {
-  text-decoration: none;
-  color: #c2ade0;
-}
-
-.section-projetos a:hover {
-  text-decoration: underline;
-  color: #c2ade0;
-}
-
-.section-projetos a:active {
-  text-decoration: none;
-  color: #c2ade0;
-}
-
 .section-projetos,
 .project-nav {
   background-color: #004138;
+}
+
+.project-nav .nav-item{
+  margin: 0 90px;
 }
 
 .section-projetos h2 {
@@ -269,6 +284,7 @@ h3 {
   background-color: #c2ade0;
 }
 
+/* Imagens Projetos */
 .projetos-imagens {
   width: 500px;
   height: auto;
@@ -318,6 +334,28 @@ h3 {
   height: auto;
 }
 
+/* Links para os projetos */
+.section-projetos a:link {
+  text-decoration: none;
+  color: #c2ade0;
+}
+
+.section-projetos a:visited {
+  text-decoration: none;
+  color: #c2ade0;
+}
+
+.section-projetos a:hover {
+  text-decoration: underline;
+  color: #c2ade0;
+}
+
+.section-projetos a:active {
+  text-decoration: none;
+  color: #c2ade0;
+}
+
+/* Botões de scroll */
 #scroll-left-button,
 #scroll-right-button {
   display: block;
@@ -334,6 +372,12 @@ h3 {
 }
 
 /* Section Footer */
+
+.image-contato {
+  width: 150px;
+
+}
+
 .section-footer {
   font-family: "Obra Letra", sans-serif;
   color: #c2ade0;
