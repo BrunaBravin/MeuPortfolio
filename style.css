@@ -135,7 +135,7 @@ h3 {
   transform: rotate(-20deg);
 }
 
-@media (max-width: 1581px) {
+@media (max-width: 1800px) {
   .resized-star {
     position: static;
     top: 50px;
@@ -149,7 +149,7 @@ h3 {
   padding-top: 150px;
 }
 
-@media (max-width: 1581px) {
+@media (max-width: 1800px) {
   .titulo-custom {
     padding-top: 0%;
   }
@@ -375,13 +375,27 @@ h3 {
 
 .image-contato {
   width: 150px;
-
 }
 
 .section-footer {
   font-family: "Obra Letra", sans-serif;
   color: #c2ade0;
   background-color: #004138;
+}
+
+/* Layout para telas menores */
+@media (max-width: 597px) {
+  .row-custom {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .col-custom {
+      margin-bottom: 3rem;
+      width: 100%; /* ajusta a largura para ocupar todo o espaço */
+      display: flex;
+      justify-content: center;
+  }
 }
 
 .resized-github {
