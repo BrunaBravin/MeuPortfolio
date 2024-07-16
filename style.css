@@ -116,8 +116,9 @@ h3 {
   font-size: 50px;
 }
 
-.section-sobre h2 {
-  margin-bottom: 50px;
+.titulo-custom-sobre {
+  margin-top: 50px;
+  margin-bottom: 0px;
 }
 
 .section-sobre p {
@@ -147,6 +148,7 @@ h3 {
 
 .titulo-custom {
   padding-top: 150px;
+  margin-bottom: 50px;
 }
 
 @media (max-width: 1800px) {
@@ -242,10 +244,18 @@ h3 {
 }
 
 /* Media queries para ajustar a imagem em diferentes tamanhos de tela */
-@media (max-width: 960px) {
+@media (max-width: 930px) {
   .resized-star2 {
-    width: 200px;
-    margin: 0%;
+    width: 150px;
+    margin: auto;
+    max-width: 50px; /* Reduz o tamanho da imagem para telas menores */
+  }
+}
+
+@media (max-width: 362px) {
+  .resized-star2 {
+    width: 100px;
+    margin: auto;
     max-width: 50px; /* Reduz o tamanho da imagem para telas menores */
   }
 }
@@ -384,7 +394,7 @@ h3 {
 }
 
 /* Layout para telas menores */
-@media (max-width: 597px) {
+@media (max-width: 597px) { 
   .row-custom {
       flex-direction: column;
       align-items: center;
