@@ -82,6 +82,12 @@
   color: #2197bd !important; /* Cor do texto quando o link está ativo */
 }
 
+.primeira-nav {
+  border-width: medium !important;
+  border-style: solid !important;
+  border-color: #004138 !important;
+} 
+
 html {
   scroll-behavior: smooth;
 }
@@ -281,6 +287,13 @@ h3 {
   margin: 0 90px;
 }
 
+.segunda-nav {
+  border-width: medium !important;
+  border-style: solid !important;
+  border-color: #a799bb !important;
+  background-color: #a799bb !important;
+} 
+
 .section-projetos h2 {
   font-family: "Obra Letra", sans-serif;
   color: #c2ade0;
@@ -382,7 +395,6 @@ h3 {
 }
 
 /* Section Footer */
-
 .image-contato {
   width: 150px;
 }
