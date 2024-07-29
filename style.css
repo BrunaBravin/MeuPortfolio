@@ -234,6 +234,19 @@ h3 {
   }
 }
 
+.lista-modulos {
+  padding-left: 2rem !important;
+  font-family: "BarlowMedium";
+  color: #004138;
+  font-size: 18px;
+}
+
+@media (max-width: 960px) {
+  .lista-modulos {
+    margin-left: 0% !important;
+  }
+}
+
 .section-formacao p {
   font-family: "BarlowMedium";
   color: #004138;
