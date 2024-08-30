@@ -15,10 +15,10 @@
 <body>
   <header>
     <div class="jumbotron text-center">
-      <img src="/Imagens/EnfeiteCirculos.png" alt="Enfeite círculos" class="jumbotron-image-right"/>
+      <img src="/Imagens/EnfeiteCirculos.png" alt="Enfeite círculos" class="jumbotron-image-right" />
       <h1>Bruna<br>Bravin<br>Bueno</h1>
       <p class="lead">Full Stack Developer Jr</p>
-      <img src="/Imagens/EnfeiteCirculos.png" alt="Enfeite círculos" class="jumbotron-image-left"/>
+      <img src="/Imagens/EnfeiteCirculos.png" alt="Enfeite círculos" class="jumbotron-image-left" />
     </div>
     <nav class="navbar navbar-expand-lg fixed-top main-nav">
       <div class="container-fluid">
@@ -131,6 +131,16 @@
             </div>
 
             <div class="progress-container">
+              <span class="label fs-5">React</span>
+              <div class="progress">
+                <div class="progress-bar progress-bar-custom" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                  aria-valuemin="0" aria-valuemax="100">
+                </div>
+                <span class="percentage fs-5">50%</span>
+              </div>
+            </div>
+
+            <div class="progress-container">
               <span class="label fs-5">SQL</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-custom" role="progressbar" style="width: 75%;" aria-valuenow="75"
@@ -201,15 +211,15 @@
           <p>07/2024 | Formação .NET Developer <br>
             Bootcamp DIO - Carga Horária de 93 horas. <br>
             Módulos abordados:
-            <ul class="container mt-4 lista-modulos">
-              <li>Testes Unitários com C#</li>
-              <li>Nuvem com Microsoft Azure</li>
-              <li>Frontend com ASP.NET MVC</li>
-              <li>Integrando APIs NET C# com Entity Framework</li>
-              <li>Bancos de Dados Relacionais e Não Relacionais com SQL Server e MongoDB</li>
-              <li>Fundamentos .NET</li>
-              <li>Programação Orientada a Objetos com C#</li>
-            </ul>
+          <ul class="container mt-4 lista-modulos">
+            <li>Testes Unitários com C#</li>
+            <li>Nuvem com Microsoft Azure</li>
+            <li>Frontend com ASP.NET MVC</li>
+            <li>Integrando APIs NET C# com Entity Framework</li>
+            <li>Bancos de Dados Relacionais e Não Relacionais com SQL Server e MongoDB</li>
+            <li>Fundamentos .NET</li>
+            <li>Programação Orientada a Objetos com C#</li>
+          </ul>
           </p>
           <p>12/2022 | TOEIC LISTENING AND READING TEST <br>
             Score: 955 pontos de 990, nível C1 CEFR
@@ -217,7 +227,7 @@
           <div class="d-flex justify-content-end px-4 py-3">
             <a href="/Curriculo/curriculo_bruna.pdf" class="btn botao-custom" download>Currículo Completo</a>
           </div>
-          <img src="Imagens/Circulo.png" class="img-fluid centered-image">
+          <img src="Imagens/Circulo.png" class="img-fluid centered-image" />
         </div>
 
       </div>
@@ -242,7 +252,10 @@
                 <a class="nav-link" id="link3" href="#" onclick="setActiveLink('link3')">Vue.js</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="link4" href="#" onclick="setActiveLink('link4')">.NET</a>
+                <a class="nav-link" id="link4" href="#" onclick="setActiveLink('link4')">React.js</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="link5" href="#" onclick="setActiveLink('link5')">.NET</a>
               </li>
             </ul>
           </div>
@@ -250,12 +263,15 @@
       </nav>
       <div id="lists-container">
         <div id="list1" class="project-list">
-          <div class="image-list">
+          <button class="buttom-prev" onclick="scrollProjects(-1)">‹</button>
+          <div id="image-list">                                                                              <!-- TODO: TIRAR DE ID PARA CLASS -->
             <div class="image-item">
               <a href="https://github.com/BrunaBravin/CRUD-Javascript-bulma" target="_blank">
-                <img src="Imagens/Projetos/Javascript/CrudLogin.png" alt="Página inicial do projeto em Javascript com Login">
+                <img src="Imagens/Projetos/Javascript/CrudLogin.png"
+                  alt="Página inicial do projeto em Javascript com Login">
                 <h4>CRUD com Login</h4>
-                <p>Página de gerenciamento de usuários (CRUD) que utiliza o LocalStorage como Banco de Dados e que possui sistema de Login.</p>
+                <p>Página de gerenciamento de usuários (CRUD) que utiliza o LocalStorage como Banco de Dados e que
+                  possui sistema de Login.</p>
               </a>
             </div>
             <div class="image-item">
@@ -269,35 +285,57 @@
               <a href="https://github.com/BrunaBravin/API_EntityFramework/tree/main" target="_blank">
                 <img src="Imagens/Projetos/Dotnet/API.png" alt="Página inicial do projeto API">
                 <h4>API Entity Framework</h4>
-                <p>API de gerenciamento de usuários que utiliza Entity Framework para permitir inserção, atualização, exclusão e visualização de dados de usuários para operações CRUD.</p>
+                <p>API de gerenciamento de usuários que utiliza Entity Framework para permitir inserção, atualização,
+                  exclusão e visualização de dados de usuários para operações CRUD.</p>
+              </a>
+            </div>
+            <div class="image-item">
+              <a href="https://github.com/BrunaBravin/react-calculadora">
+                <img src="Imagens/Projetos/React/Calculadora.PNG" alt="Página inicial da calculadora em React">
+                <h4>Calculadora</h4>
+                <p>Calculadora feita em React durante a Formação React Developer da DIO</p>
               </a>
             </div>
           </div>
+          <button class="buttom-next" onclick="scrollProjects(1)">›</button>
 
         </div>
+
         <div id="list2" class="project-list">
-          <div class="image-list">
+          <div id="image-list">
             <div class="image-item">
               <a href="https://github.com/BrunaBravin/CRUD-Javascript-bulma" target="_blank">
-                <img src="Imagens/Projetos/Javascript/CrudLogin.png" alt="Página inicial do projeto em Javascript com Login">
+                <img src="Imagens/Projetos/Javascript/CrudLogin.png"
+                  alt="Página inicial do projeto em Javascript com Login">
                 <h4>CRUD com Login</h4>
-                <p>Página de gerenciamento de usuários em Javascript utilizando o LocalStorage como Banco de Dados e que possui sistema de Login.</p>
+                <p>Página de gerenciamento de usuários em Javascript utilizando o LocalStorage como Banco de Dados e que
+                  possui sistema de Login.</p>
               </a>
             </div>
           </div>
         </div>
+
         <div id="list3" class="project-list">
-          <!-- <button id="scroll-left-button">Scroll Left</button>
-          <button id="scroll-right-button">Scroll Right</button> -->
-          <div class="image-list">
-            <div class="image-item">
-              <p class="fs-4 d-flex justify-content-center align-items-center" >Os projetos em Vuejs serão revisados e adicionados aos poucos!</p>
+            <div class="image-item-vue">
+              <p class="fs-4 d-flex justify-content-center align-items-center">
+                Os projetos em Vuejs serão revisados e
+                adicionados aos poucos!</p>
             </div>
           </div>
-          
         </div>
         <div id="list4" class="project-list">
           <div class="image-list">
+            <div class="image-item">
+              <a href="https://github.com/BrunaBravin/react-calculadora">
+                <img src="Imagens/Projetos/React/Calculadora.PNG" alt="Página inicial da calculadora em React">
+                <h4>Calculadora</h4>
+                <p>Calculadora feita em React durante a Formação React Developer da DIO</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="list5" class="project-list">
+          <div id="image-list">
             <div class="image-item">
               <a href="https://github.com/BrunaBravin">
                 <img src="Imagens/Projetos/Dotnet/Home.png" alt="Página inicial do projeto em dotnet">
@@ -309,7 +347,8 @@
               <a href="https://github.com/BrunaBravin/API_EntityFramework/tree/main" target="_blank">
                 <img src="Imagens/Projetos/Dotnet/API.png" alt="Página inicial do projeto API">
                 <h4>API Entity Framework</h4>
-                <p>API de gerenciamento de usuários que utiliza Entity Framework para permitir inserção, atualização, exclusão e visualização de dados de usuários para operações CRUD.</p>
+                <p>API de gerenciamento de usuários que utiliza Entity Framework para permitir inserção, atualização,
+                  exclusão e visualização de dados de usuários para operações CRUD.</p>
               </a>
             </div>
           </div>
@@ -319,7 +358,7 @@
   </main>
   <footer id="contato" class="text-center section-footer">
     <div class="container p-4">
-      <img src="Imagens/EstrelaContato.png" class="justify-content-center image-contato"/>
+      <img src="Imagens/EstrelaContato.png" class="justify-content-center image-contato" />
       <h5 class="d-flex justify-content-center text-uppercase p-4 mb-5 fs-2">Contato</h5>
       <div class="row d-flex justify-content-center row-custom">
         <div class="col-sm-3 col-custom">

@@ -110,7 +110,7 @@ html {
 }
 
 #contato {
-  padding-top: 150px;
+  padding-top: 30px;
 }
 
 /* Section Sobre */
@@ -291,12 +291,17 @@ h3 {
 }
 
 /* Section Projetos */
+.section-projetos {
+  background-color: #004138;
+  padding: 2rem 0;
+}
+
 .section-projetos,
 .project-nav {
   background-color: #004138;
 }
 
-.project-nav .nav-item{
+.project-nav .nav-item {
   margin: 0 90px;
 }
 
@@ -305,14 +310,17 @@ h3 {
   border-style: solid !important;
   border-color: #a799bb !important;
   background-color: #a799bb !important;
-} 
+}
 
 .section-projetos h2 {
   font-family: "Obra Letra", sans-serif;
   color: #c2ade0;
-  padding: 1.5rem; /* Equivalente a p-4 */
-  margin-bottom: 3rem; /* Equivalente a mb-5 */
-  padding-top: 3rem; /* Equivalente a mt-5 */
+  padding: 1.5rem;
+  /* Equivalente a p-4 */
+  margin-bottom: 3rem;
+  /* Equivalente a mb-5 */
+  padding-top: 3rem;
+  /* Equivalente a mt-5 */
   font-size: 50px;
 }
 
@@ -320,33 +328,54 @@ h3 {
   background-color: #c2ade0;
 }
 
-/* Imagens Projetos */
 .projetos-imagens {
   width: 500px;
   height: auto;
 }
 
+
 .project-list {
+  display: flex;
   overflow: hidden;
-  position: relative;
+  list-style-type: none;
+  padding: 0 90px 0 90px;
+  margin: 0;
+  transition: 0.5s ease;
+  /* Transição suave */
 }
 
-.image-list {
-  display: flex;
-  flex-wrap: wrap; /* mudanças*/
-  gap: 1rem;   /* mudanças*/
-  height: 100%;
-  overflow-x: hidden;
-  justify-content: center;
+#image-list{
+  display: flex !important;
+}
+
+.buttom-prev, .buttom-next {
+  top: 200px !important;                             /* TODO: arrumar botão para que ele não diminua de tamanho quando a tela diminuir */
+  width: 4% !important;                              /*TODO: fique na posição certa, um de cada lado*/
+  border-radius: 50%;                                /*TODO: arrumar para celular */
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  background: #2197bd;
+  border: 0;
 }
 
 .image-item {
-  flex: 1 1 300px;  /* mudanças*/
-  min-width: 500px;
-  max-width: 200px; /* Fix the width of each image item */
+  flex: 1 1 300px;
+  min-width: 600px;
+  max-width: 200px;
   padding-top: 50px;
   text-align: center;
-  box-sizing: border-box; /* Include padding and border in the width and height */
+  box-sizing: border-box;
+  font-family: "BarlowMedium";
+  color: #c2ade0;
+}
+
+.image-item-vue {
+  justify-content: center !important;
+  min-width: 500px;
+  padding-top: 50px;
+  text-align: center;
+  box-sizing: border-box;
   font-family: "BarlowMedium";
   color: #c2ade0;
 }
@@ -391,21 +420,6 @@ h3 {
   color: #c2ade0;
 }
 
-/* Botões de scroll */
-#scroll-left-button,
-#scroll-right-button {
-  display: block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-#scroll-left-button:hover,
-#scroll-right-button:hover {
-  background-color: #0056b3;
-}
 
 /* Section Footer */
 .image-contato {
