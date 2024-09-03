@@ -29,19 +29,19 @@
         <div class="collapse navbar-collapse" id="PrimeiraNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" id="home" aria-current="page" href="#" onclick="setActiveLink('home')">Home</a>
+              <a class="nav-link" id="home" aria-current="page" href="#" onclick="setActiveNavLink(this)">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#sobre" onclick="setActiveLink('sobre')">Sobre</a>
+              <a class="nav-link" href="#sobre" onclick="setActiveNavLink(this)">Sobre</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#formacao" onclick="setActiveLink('formacao')">Formação</a>
+              <a class="nav-link" href="#formacao" onclick="setActiveNavLink(this)">Formação</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#projetos" onclick="setActiveLink('projetos')">Projetos</a>
+              <a class="nav-link" href="#projetos" onclick="setActiveNavLink(this)">Projetos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contato" onclick="setActiveLink('contato')">Contato</a>
+              <a class="nav-link" href="#contato" onclick="setActiveNavLink(this)">Contato</a>
             </li>
           </ul>
         </div>
@@ -264,7 +264,7 @@
       <div id="lists-container">
         <div id="list1" class="project-list">
           <button class="buttom-prev" onclick="scrollProjects(-1)">‹</button>
-          <div id="image-list">                                                                              <!-- TODO: TIRAR DE ID PARA CLASS -->
+          <div id="image-list" class="image-list">                                                                              <!-- TODO: TIRAR DE ID PARA CLASS -->
             <div class="image-item">
               <a href="https://github.com/BrunaBravin/CRUD-Javascript-bulma" target="_blank">
                 <img src="Imagens/Projetos/Javascript/CrudLogin.png"
@@ -302,7 +302,7 @@
         </div>
 
         <div id="list2" class="project-list">
-          <div id="image-list">
+          <div id="image-list" class="image-list">
             <div class="image-item">
               <a href="https://github.com/BrunaBravin/CRUD-Javascript-bulma" target="_blank">
                 <img src="Imagens/Projetos/Javascript/CrudLogin.png"
@@ -335,7 +335,7 @@
           </div>
         </div>
         <div id="list5" class="project-list">
-          <div id="image-list">
+          <div id="image-list" class="image-list">
             <div class="image-item">
               <a href="https://github.com/BrunaBravin">
                 <img src="Imagens/Projetos/Dotnet/Home.png" alt="Página inicial do projeto em dotnet">
