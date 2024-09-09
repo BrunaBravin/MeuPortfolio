@@ -335,26 +335,36 @@ h3 {
 
 
 .project-list {
+  position: relative;
   display: flex;
   overflow: hidden;
   list-style-type: none;
-  padding: 0 90px 0 90px;
+  padding: 0 40px;
   margin: 0;
   transition: 0.5s ease;
   /* Transição suave */
 }
-
-#image-list{
-  display: flex !important;
+                        
+.buttom-prev {
+  position: absolute;
+  top: 250px;
+  left: 0;
+  width: 4% !important; 
+  z-index: 1;
+  margin: 30px;
+  border-radius: 50%; 
+  background: #2197bd;
+  border: 0;
 }
 
-.buttom-prev, .buttom-next {
-  top: 200px !important;                             /* TODO: arrumar botão para que ele não diminua de tamanho quando a tela diminuir */
-  width: 4% !important;                              /*TODO: fique na posição certa, um de cada lado*/
-  border-radius: 50%;                                /*TODO: arrumar para celular */
-  justify-content: center !important;
-  align-items: center !important;
-  text-align: center !important;
+.buttom-next {
+  position: absolute;
+  top: 250px;
+  right: 0;
+  width: 4% !important; 
+  z-index: 1;
+  margin: 30px;
+  border-radius: 50%; 
   background: #2197bd;
   border: 0;
 }

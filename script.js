@@ -76,20 +76,24 @@ function scrollProjects(direction) {
   // Elementos do carrossel
   const imageList = document.getElementsByClassName("image-list")[0]; // seleciona o elemento que contém todas as imagens
   const items = document.querySelectorAll(".image-item");             // Pega todas as imagens
-  const totalItems = items.length;                                    // armazena o número total de itens.
-  const containerWidth = document.querySelector(".image-item").getBoundingClientRect().width; //  Largura do contêiner de um item (assumindo que todos têm a mesma largura).
+  const totalItems = items.length; // TODO: totalItems precisa ser 4  // armazena o número total de itens.
+  const containerWidth = document.querySelector(".image-list").getBoundingClientRect().width; //  Largura do contêiner de um item (assumindo que todos têm a mesma largura).
+  //console.log('Largura do contêiner de um item', containerWidth);
   const itemWidth = items[0].getBoundingClientRect().width;           // Largura de um item
+  //console.log('Largura de um item', itemWidth);
 
   // Calcula dinamicamente quantos itens cabem visíveis no contêiner
   const visibleItems = Math.floor(containerWidth / itemWidth);
-  console.log('quantos itens cabem visíveis no contêiner', visibleItems);
+  //console.log('quantos itens cabem visíveis no contêiner', visibleItems);
 
   // Controle de índice de rolagem
   let currentIndex = parseInt(imageList.getAttribute('data-current-index')) || 0; // Usando data attribute para persistir o estado
 
   // Atualiza o índice de acordo com a direção
   currentIndex += direction;
-
+  console.log('índice de acordo com a direção', currentIndex);
+  console.log('totalitens', totalItems);
+  console.log('quantos itens cabem visíveis no contêiner', visibleItems);
   // Limita o índice para evitar rolar para fora dos limites
   if (currentIndex < 0) {
     currentIndex = 0;
@@ -105,11 +109,12 @@ function scrollProjects(direction) {
   imageList.setAttribute('data-current-index', currentIndex);
 
   // Adiciona um listener para o redimensionamento da janela dentro da mesma função
-  window.addEventListener('resize', function() {
-    const newContainerWidth = document.querySelector(".carousel-container").getBoundingClientRect().width;
+  window.addEventListener('resize', function () {
+    console.log('aaaaa');
+    const newContainerWidth = document.querySelector(".image-list").getBoundingClientRect().width;
     const newVisibleItems = Math.floor(newContainerWidth / itemWidth);
-    console.log('novo tamanho do container', newContainerWidth);
-    console.log('novo tanto de itens visiveis', newVisibleItems);
+    // console.log('novo tamanho do container', newContainerWidth);
+    // console.log('novo tanto de itens visiveis', newVisibleItems);
 
     if (currentIndex > totalItems - newVisibleItems) {
       currentIndex = totalItems - newVisibleItems;
@@ -122,3 +127,4 @@ function scrollProjects(direction) {
     imageList.style.transform = `translateX(${newOffset}px)`;
   });
 }
+
