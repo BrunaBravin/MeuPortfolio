@@ -233,8 +233,8 @@
       </div>
     </section>
     <section id="projetos" class="section-projetos">       <!--  TODO: arrumar parte branca que surge quando a tela é menor -->
-      <h2 class="d-flex justify-content-center">Projetos Anteriores</h2>
-      <nav class="navbar navbar-expand-lg project-nav">
+      <h2 class="d-flex navbar-expand-lg justify-content-center">Projetos Anteriores</h2>
+      <nav class="navbar project-nav">
         <div class="container-fluid">
           <button class="navbar-toggler segunda-nav" type="button" data-toggle="collapse" data-target="#SegundaNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -262,8 +262,8 @@
         </div>
       </nav>
       <div id="lists-container">
-        <div id="list1" class="project-list">
-          <button class="buttom-prev" onclick="scrollProjects(-1)">‹</button>
+        <div id="list1" class="project-list">   <!-- onclick="scrollProjects(1)" -->
+          <button class="buttom-prev" onclick="scrollProjects(document.querySelector('#list1 .image-list'), -1)">‹</button>
           <div class="d-flex image-list">                             
             <div class="image-item">
               <a href="https://github.com/BrunaBravin/CRUD-Javascript-bulma" target="_blank">
@@ -297,7 +297,7 @@
               </a>
             </div>
           </div>
-          <button class="buttom-next" onclick="scrollProjects(1)">›</button>
+          <button class="buttom-next" onclick="scrollProjects(document.querySelector('#list1 .image-list'), 1)">›</button>
 
         </div>
 

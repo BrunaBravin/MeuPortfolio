@@ -18,6 +18,7 @@
   src: url("Fontes/Barlow/Barlow-ExtraLight.ttf") format("truetype");
 }
 
+
 /* Modificando o tamanho da imagem */
 .resized-image {
   width: 600px; /* Define a largura como 300px */
@@ -327,6 +328,60 @@ h3 {
 .project-nav .nav-link.active {
   background-color: #c2ade0;
 }
+
+
+
+
+
+
+@media (max-width: 1289px) {
+  .project-nav .navbar-collapse {
+    display: none;
+  }
+
+  .project-nav .navbar-toggler {
+    display: block;
+  }
+}
+
+/* @media (min-width: 1290px) {
+  .project-nav .navbar-collapse {
+    display: inline !important;
+    text-align: center;
+  }
+
+  .project-nav .navbar-toggler {
+    display: none;
+  }
+} */
+
+@media (min-width: 1290px) {
+  .project-nav .navbar-collapse {
+    display: flex !important;
+    justify-content: center; /* Alinha os itens no centro */
+  }
+
+  .project-nav .navbar-nav {
+    display: flex; /* Isso alinha os itens horizontalmente */
+    flex-direction: row; /* Garante que os itens fiquem em uma linha */
+  }
+
+  .project-nav .nav-item {
+    margin: 0 10px; /* Espaçamento entre os itens */
+  }
+
+  .project-nav .navbar-toggler {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
 
 .projetos-imagens {
   width: 500px;

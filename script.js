@@ -72,59 +72,41 @@ function setActiveNavLink(element) {
 }
 
 
-function scrollProjects(direction) {
-  // Elementos do carrossel
-  const imageList = document.getElementsByClassName("image-list")[0]; // seleciona o elemento que contém todas as imagens
-  const items = document.querySelectorAll(".image-item");             // Pega todas as imagens
-  const totalItems = items.length; // TODO: totalItems precisa ser 4  // armazena o número total de itens.
-  const containerWidth = document.querySelector(".image-list").getBoundingClientRect().width; //  Largura do contêiner de um item (assumindo que todos têm a mesma largura).
-  //console.log('Largura do contêiner de um item', containerWidth);
-  const itemWidth = items[0].getBoundingClientRect().width;           // Largura de um item
-  //console.log('Largura de um item', itemWidth);
+function scrollProjects(imageList, direction) {
+  // Agora 'imageList' é específico para o carrossel da lista visível
 
-  // Calcula dinamicamente quantos itens cabem visíveis no contêiner
-  const visibleItems = Math.floor(containerWidth / itemWidth);
-  //console.log('quantos itens cabem visíveis no contêiner', visibleItems);
+  const items = imageList.querySelectorAll(".image-item"); // Pega todas as imagens dessa lista
+  const totalItems = items.length;
+  const containerWidth = imageList.getBoundingClientRect().width; // Largura do contêiner
+  const itemWidth = items[0].getBoundingClientRect().width;
 
-  // Controle de índice de rolagem
-  let currentIndex = parseInt(imageList.getAttribute('data-current-index')) || 0; // Usando data attribute para persistir o estado
+  const visibleItems = Math.floor(containerWidth / itemWidth); // Quantos itens visíveis
 
-  // Atualiza o índice de acordo com a direção
+  let currentIndex = parseInt(imageList.getAttribute('data-current-index')) || 0; // Índice do carrossel
+
+  // Atualiza o índice conforme a direção (exemplo: para frente ou para trás)
   currentIndex += direction;
-  console.log('índice de acordo com a direção', currentIndex);
-  console.log('totalitens', totalItems);
-  console.log('quantos itens cabem visíveis no contêiner', visibleItems);
-  // Limita o índice para evitar rolar para fora dos limites
+
+  // Limita o índice para não ultrapassar os limites
   if (currentIndex < 0) {
     currentIndex = 0;
   } else if (currentIndex > totalItems - visibleItems) {
     currentIndex = totalItems - visibleItems;
   }
 
-  // Calcula o deslocamento e aplica a transformação
   const offset = -(itemWidth * currentIndex);
   imageList.style.transform = `translateX(${offset}px)`;
 
-  // Atualiza o atributo data-current-index para manter o estado
   imageList.setAttribute('data-current-index', currentIndex);
-
-  // Adiciona um listener para o redimensionamento da janela dentro da mesma função
   window.addEventListener('resize', function () {
-    console.log('aaaaa');
-    const newContainerWidth = document.querySelector(".image-list").getBoundingClientRect().width;
+    const newContainerWidth = imageList.getBoundingClientRect().width;
     const newVisibleItems = Math.floor(newContainerWidth / itemWidth);
-    // console.log('novo tamanho do container', newContainerWidth);
-    // console.log('novo tanto de itens visiveis', newVisibleItems);
 
     if (currentIndex > totalItems - newVisibleItems) {
       currentIndex = totalItems - newVisibleItems;
-      if (currentIndex < 0) {
-        currentIndex = 0;
-      }
     }
 
     const newOffset = -(itemWidth * currentIndex);
     imageList.style.transform = `translateX(${newOffset}px)`;
   });
 }
-
